@@ -1,53 +1,53 @@
 import { useState, useEffect } from 'react'
 
 function App() {
-	const hiragana = [
-		{ romanji: 'a', hiragana: 'あ' },
-		{ romanji: 'i', hiragana: 'い' },
-		{ romanji: 'u', hiragana: 'う' },
-		{ romanji: 'e', hiragana: 'え' },
-		{ romanji: 'o', hiragana: 'お' },
-		{ romanji: 'ka', hiragana: 'か' },
-		{ romanji: 'ki', hiragana: 'き' },
-		{ romanji: 'ku', hiragana: 'く' },
-		{ romanji: 'ke', hiragana: 'け' },
-		{ romanji: 'ko', hiragana: 'こ' },
-		{ romanji: 'sa', hiragana: 'さ' },
-		{ romanji: 'shi', hiragana: 'し' },
-		{ romanji: 'su', hiragana: 'す' },
-		{ romanji: 'se', hiragana: 'せ' },
-		{ romanji: 'so', hiragana: 'そ' },
-		{ romanji: 'ta', hiragana: 'た' },
-		{ romanji: 'chi', hiragana: 'ち' },
-		{ romanji: 'tsu', hiragana: 'つ' },
-		{ romanji: 'te', hiragana: 'て' },
-		{ romanji: 'to', hiragana: 'と' },
-		{ romanji: 'na', hiragana: 'な' },
-		{ romanji: 'ni', hiragana: 'に' },
-		{ romanji: 'nu', hiragana: 'ぬ' },
-		{ romanji: 'ne', hiragana: 'ね' },
-		{ romanji: 'no', hiragana: 'の' },
-		{ romanji: 'ha', hiragana: 'は' },
-		{ romanji: 'hi', hiragana: 'ひ' },
-		{ romanji: 'fu', hiragana: 'ふ' },
-		{ romanji: 'he', hiragana: 'へ' },
-		{ romanji: 'ho', hiragana: 'ほ' },
-		{ romanji: 'ma', hiragana: 'ま' },
-		{ romanji: 'mi', hiragana: 'み' },
-		{ romanji: 'mu', hiragana: 'む' },
-		{ romanji: 'me', hiragana: 'め' },
-		{ romanji: 'mo', hiragana: 'も' },
-		{ romanji: 'ya', hiragana: 'や' },
-		{ romanji: 'yu', hiragana: 'ゆ' },
-		{ romanji: 'yo', hiragana: 'よ' },
-		{ romanji: 'ra', hiragana: 'ら' },
-		{ romanji: 'ri', hiragana: 'り' },
-		{ romanji: 'ru', hiragana: 'る' },
-		{ romanji: 're', hiragana: 'れ' },
-		{ romanji: 'ro', hiragana: 'ろ' },
-		{ romanji: 'wa', hiragana: 'わ' },
-		{ romanji: 'wo', hiragana: 'を' },
-		{ romanji: 'n', hiragana: 'ん' }
+	const Hiragana = [
+		{ romanji: 'a', Hiragana: 'あ' },
+		{ romanji: 'i', Hiragana: 'い' },
+		{ romanji: 'u', Hiragana: 'う' },
+		{ romanji: 'e', Hiragana: 'え' },
+		{ romanji: 'o', Hiragana: 'お' },
+		{ romanji: 'ka', Hiragana: 'か' },
+		{ romanji: 'ki', Hiragana: 'き' },
+		{ romanji: 'ku', Hiragana: 'く' },
+		{ romanji: 'ke', Hiragana: 'け' },
+		{ romanji: 'ko', Hiragana: 'こ' },
+		{ romanji: 'sa', Hiragana: 'さ' },
+		{ romanji: 'shi', Hiragana: 'し' },
+		{ romanji: 'su', Hiragana: 'す' },
+		{ romanji: 'se', Hiragana: 'せ' },
+		{ romanji: 'so', Hiragana: 'そ' },
+		{ romanji: 'ta', Hiragana: 'た' },
+		{ romanji: 'chi', Hiragana: 'ち' },
+		{ romanji: 'tsu', Hiragana: 'つ' },
+		{ romanji: 'te', Hiragana: 'て' },
+		{ romanji: 'to', Hiragana: 'と' },
+		{ romanji: 'na', Hiragana: 'な' },
+		{ romanji: 'ni', Hiragana: 'に' },
+		{ romanji: 'nu', Hiragana: 'ぬ' },
+		{ romanji: 'ne', Hiragana: 'ね' },
+		{ romanji: 'no', Hiragana: 'の' },
+		{ romanji: 'ha', Hiragana: 'は' },
+		{ romanji: 'hi', Hiragana: 'ひ' },
+		{ romanji: 'fu', Hiragana: 'ふ' },
+		{ romanji: 'he', Hiragana: 'へ' },
+		{ romanji: 'ho', Hiragana: 'ほ' },
+		{ romanji: 'ma', Hiragana: 'ま' },
+		{ romanji: 'mi', Hiragana: 'み' },
+		{ romanji: 'mu', Hiragana: 'む' },
+		{ romanji: 'me', Hiragana: 'め' },
+		{ romanji: 'mo', Hiragana: 'も' },
+		{ romanji: 'ya', Hiragana: 'や' },
+		{ romanji: 'yu', Hiragana: 'ゆ' },
+		{ romanji: 'yo', Hiragana: 'よ' },
+		{ romanji: 'ra', Hiragana: 'ら' },
+		{ romanji: 'ri', Hiragana: 'り' },
+		{ romanji: 'ru', Hiragana: 'る' },
+		{ romanji: 're', Hiragana: 'れ' },
+		{ romanji: 'ro', Hiragana: 'ろ' },
+		{ romanji: 'wa', Hiragana: 'わ' },
+		{ romanji: 'wo', Hiragana: 'を' },
+		{ romanji: 'n', Hiragana: 'ん' }
 	]
 
 	const [input, setInput] = useState('')
@@ -59,7 +59,7 @@ function App() {
 	const [error, setError] = useState(false)
 
 	const setRandomHiragana = () => {
-		const randomIndex = Math.floor(Math.random() * hiragana.length)
+		const randomIndex = Math.floor(Math.random() * Hiragana.length)
 		setCurrent(randomIndex)
 	}
 
@@ -70,7 +70,7 @@ function App() {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		 
-		if (input.toLowerCase() === hiragana[current].romanji) {
+		if (input.toLowerCase() === Hiragana[current].romanji) {
 			setStreak(streak + 1)
 			setMaxStreak(streak + 1 > maxStreak ? streak + 1 : maxStreak)
 			setError(false)
@@ -78,8 +78,8 @@ function App() {
 			localStorage.setItem('streak', streak + 1)
 			localStorage.setItem('maxStreak', streak + 1 > maxStreak ? streak + 1 : maxStreak)
 		} else {
-			const h = hiragana[current].hiragana
-			const r = hiragana[current].romanji
+			const h = Hiragana[current].Hiragana
+			const r = Hiragana[current].romanji
 			setError(`Wrong! The correct answer for ${h} is ${r}`)
 			setStreak(0)
 			localStorage.setItem('streak', 0)
@@ -105,7 +105,7 @@ function App() {
 			</header>
 
 			<div className="text-9xl font-bold mb-8">
-				<p>{hiragana[current].hiragana}</p>
+				<p>{Hiragana[current].Hiragana}</p>
 			</div>
 
 			<div className="mb-8">
